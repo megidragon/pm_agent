@@ -20,7 +20,7 @@ Debes determinar las acciones que el usuario desea realizar en relación con las
   - "asignar": para asignar una tarea (incluye "id" y "assigned_to").
   - "completar": para marcar una tarea como completada (incluye "id").
   - "listar": para obtener el listado de tareas del sprint actual (no requiere datos adicionales).
-Si el mensaje no se relaciona con tareas, responde: { "action": "none" }.
+Si el mensaje no se relaciona con tareas o no requiera el uso de herramientas del sistema, responde: { "action": "none" }.
 Cuando el mensaje implique desglosar una feature en varias tareas, debes responder con un array de objetos. 
 Por ejemplo, si el usuario dice "Quiero que desgloses la feature de implementar un sistema de pago para recargar tarjetas NFC usando la tarjeta de crédito en 4 tareas", 
 responde con un array de 4 objetos, cada uno con "action": "crear" y las propiedades "title" y "description" (la "description" puede estar vacía si no se especifica).
