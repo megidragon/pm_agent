@@ -1,0 +1,10 @@
+- Implementación basica de telegram (hecho)
+- Implementación basica de openai (hecho)
+- Implementación basica de sqlite (hecho)
+- Implementación de sistema de login (hecho)
+- Implementación de sistema de tareas y sprints (hecho)
+
+- Implementación de respuesta con IA cuando se habla por telegram
+- Usar IA para realizar un analisis de las tareas cada 30 minutos, y verificar estado de las tareas con los usuarios.
+- Si un usuario da un estimado de tiempo, el agente no le preguntara nada relacionado con las tareas al usuario hasta que termine el periodo que el definio
+- La IA debe generar un informe de las tareas y sus tiempos, asi como un desglose de lo que hizo cada usuario ese sprint cada Lunes

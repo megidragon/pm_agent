@@ -1,0 +1,14 @@
+{
+  "name": "pm_agent_nodejs",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.57.0",
+    "sqlite3": "^5.1.6",
+    "node-cron": "^3.0.2",
+    "googleapis": "^105.0.0",
+    "openai": "^3.2.1",
+    "dotenv": "^16.0.0"
+  }
+}
