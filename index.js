@@ -28,6 +28,7 @@ db.serialize(() => {
     // Tabla de tareas
     db.run(`CREATE TABLE IF NOT EXISTS tasks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
     description TEXT,
     status TEXT,
     assigned_to TEXT,
@@ -44,16 +45,7 @@ const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
  * Envía la respuesta del bot junto con el listado de comandos.
  */
 function sendReply(chatId, message) {
-    const availableCommands = `
-
-Comandos disponibles:
-  /login <nombre> - Regístrate con un nombre.
-  /addTask [descripción] - Agrega una nueva tarea.
-  /updateTask [id] [nuevoStatus] - Actualiza el estado de una tarea.
-  /listTasks - Muestra las tareas del sprint actual.
-  /summary - Genera un resumen de las tareas del sprint actual.
-  /help - Muestra este mensaje de ayuda.
-  `;
+    const availableCommands = `Atajos: /listTasks | /summary | /help`;
     bot.sendMessage(chatId, message + availableCommands);
 }
 
@@ -455,7 +447,8 @@ function processMessage(user, msg) {
     /updateTask [id] [nuevoStatus] - Actualiza el estado de una tarea.
     /listTasks - Muestra las tareas del sprint actual.
     /summary - Genera un resumen de las tareas del sprint actual.
-    /help - Muestra este mensaje de ayuda.`);
+    /help - Muestra este mensaje de ayuda.
+    O puedes escribir lo que necesites`);
     } else {
         // Si no es un comando, se utiliza el fallback con OpenAI
         handleFallback(user, msg);
